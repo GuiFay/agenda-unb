@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/contact_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="90dp"
+        android:text="@string/contact_new"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/contact_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="80dp"
+        android:text="@string/contact_email"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/contact_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contact_email"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="58dp"
+        android:text="@string/contact_tel"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contact_tel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="58dp"
+        android:text="@string/contact_name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <QuickContactBadge
+        android:id="@+id/quickContactBadge1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contact_name"
+        android:layout_alignLeft="@+id/contact_new"
+        android:layout_alignRight="@+id/contact_new"
+        android:layout_below="@+id/contact_new"
+        android:layout_marginBottom="36dp"
+        android:layout_marginTop="34dp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/contact_name"
+        android:layout_alignBottom="@+id/contact_name"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/contact_name"
+        android:ems="10"
+        android:inputType="textPersonName" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contact_tel"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/contact_tel"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contact_email"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/contact_email"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+</RelativeLayout>
