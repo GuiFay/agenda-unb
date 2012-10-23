@@ -1,10 +1,13 @@
 package com.unb.agenda2;
 
 import android.app.Activity;
+import android.content.ContentUris;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -18,7 +21,7 @@ public class MainActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout2);
 	ListView a =(ListView) findViewById(R.id.list_agenda);
-				  Contato c1 = new Contato(0, "Joao","5555555","maluco@123.com");
+		  Contato c1 = new Contato(0, "Joao","5555555","maluco@123.com");
 		  Contato c2 = new Contato(1, "Maria","99999999","maluca@321.com");
 		  Contato.agenda.add(c1);
 		  Contato.agenda.add(c2);
@@ -33,8 +36,7 @@ public class MainActivity extends Activity{
 
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, R.id.contact_new, 0, R.string.contact_new).setIcon(
-				android.R.drawable.ic_menu_add);
+		menu.add(0, R.id.contact_new, 0, R.string.contact_new).setIcon(android.R.drawable.ic_menu_add);
 
 		return true;
 	}
@@ -49,8 +51,30 @@ public class MainActivity extends Activity{
 		return super.onOptionsItemSelected(item);
 	}
 	
-public void onResume(){
+	
+	/*
+	 * 
+	 * testes de clicar no item da lista
+	 * 
+	 * 	
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+	        Uri uri = ContentUris.withAppendedId(getIntent().getData(), id);
+	        
+	        String action = getIntent().getAction();
+	        if (Intent.ACTION_PICK.equals(action) || Intent.ACTION_GET_CONTENT.equals(action)) {
+	            // The caller is waiting for us to return a note selected by
+	            // the user.  The have clicked on one, so return it now.
+	            setResult(RESULT_OK, new Intent().setData(uri));
+	        } else {
+	            // Launch activity to view/edit the currently selected item
+	            startActivity(new Intent("com.unb.agenda2.Contact_edit_del"));
+	        }
+	    }
+	
+	*/
+	
+//public void onResume(){
 	//a.setAdapter(dataAdapter);
-}
+//}
 
 }

@@ -1,20 +1,23 @@
 package com.unb.agenda2;
 
+import com.unb.agenda2.Entidades.Contato;
+
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.unb.agenda2.Entidades.Contato;
-
-public class Contact_new extends Activity {
+public class Contact_edit_del extends Activity{
 	
-	
-	 public void onCreate(Bundle savedInstanceState) {
+	 
+	/*
+	 * classe de editar e excluir contato
+	 * possivelmente será melhor duas classes diferentes
+	 * 
+	public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
-			setContentView(R.layout.adicionar_contato);
+			setContentView(R.layout.editar_excluir_contato);
 			Button add = (Button) findViewById(R.id.button1);
 			add.setOnClickListener(new View.OnClickListener() {
 				
@@ -30,4 +33,7 @@ public class Contact_new extends Activity {
 			}); 
 			
 	    }
+	*/
+	
+
 }
