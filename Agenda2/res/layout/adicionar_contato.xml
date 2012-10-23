@@ -55,7 +55,7 @@
         android:layout_marginTop="34dp" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/nome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/contact_name"
@@ -69,7 +69,7 @@
     </EditText>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/telefone_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/contact_tel"
@@ -79,7 +79,7 @@
         android:inputType="phone" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/email_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/contact_email"
@@ -87,5 +87,13 @@
         android:layout_toRightOf="@+id/contact_email"
         android:ems="10"
         android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Adicionar" />
 
 </RelativeLayout>

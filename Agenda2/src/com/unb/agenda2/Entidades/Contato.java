@@ -1,16 +1,18 @@
 package com.unb.agenda2.Entidades;
 
-public class Contato {
+import java.util.ArrayList;
+
+public class Contato{
+	
+	public static ArrayList<Contato> agenda = new ArrayList<Contato>();
 	
 	private Integer id;
 	private String name;
 	private String phone;
 	private String email;
 	
-	
-	
 	public Contato(Integer id, String name, String phone, String email) {
-		super();
+
 		this.id = id;
 		this.name = name;
 		this.phone = phone;
@@ -40,9 +42,9 @@ public class Contato {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	
-	
-	
-
+	@Override
+	public String toString() {
+		return name + "\n" + phone+ "\n" + email;
+	}
 }
+
